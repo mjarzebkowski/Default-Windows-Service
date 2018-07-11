@@ -41,12 +41,14 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.ServiceName = "Service1";
+            this.serviceInstaller1.ServiceName = "Default Windows Service 1";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.serviceInstaller1.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller1_AfterInstall);
             // 
             // eventLog1
             // 
-            this.eventLog1.Log = "MyEventLog";
+            this.eventLog1.Log = "MyNewLog";
+            this.eventLog1.Source = "MyEventLog";
             // 
             // ProjectInstaller
             // 

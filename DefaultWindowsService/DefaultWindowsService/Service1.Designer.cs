@@ -33,8 +33,9 @@
             // 
             // eventLog1
             // 
-            this.eventLog1.Log = "MyEventLog";
-            this.eventLog1.Source = "MyService";
+            this.eventLog1.Log = "MyNewLog";
+            this.eventLog1.Source = "MyEventLog";
+            this.eventLog1.EntryWritten += new System.Diagnostics.EntryWrittenEventHandler(this.eventLog1_EntryWritten);
             // 
             // Service1
             // 
